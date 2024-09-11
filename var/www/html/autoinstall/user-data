@@ -1,0 +1,21 @@
+#cloud-config
+autoinstall:
+  version: 1
+  identity:
+    hostname: ubuntu
+    password: '$6$06rmTmqhZbsPAkSb$NGRjl2hOjKuRJWN2uaku/jawGt4xIGdRexmilQu9frfAAA3.JM4No8KiRMb6gJjhW5P3loVCF7ZZ2DZMrpVr/1'
+    realname: 'ubuntu'
+    username: ubuntu
+  apt:
+    disable_components: []
+    preserve_sources_list: false
+    primary:
+    - arches:
+      - amd64
+      - i386
+      uri: http://mirrors.ustc.edu.cn/ubuntu
+    - arches:
+      - default
+      uri: http://ports.ubuntu.com/ubuntu-ports
+  drivers:
+    install: false
