@@ -1,0 +1,20 @@
+DEFAULT menu.c32
+MENU TITLE ULTIMATE PXE SERVER - By Griffon - Ver 1.0
+PROMPT 0
+TIMEOUT 0
+
+MENU COLOR TABMSG  37;40  #ffffffff #00000000
+MENU COLOR TITLE   37;40  #ffffffff #00000000
+MENU COLOR SEL      7     #ffffffff #00000000
+MENU COLOR UNSEL    37;40 #ffffffff #00000000
+MENU COLOR BORDER   37;40 #ffffffff #00000000
+
+LABEL Ubuntu Live-server 22.04.4 ISO IPv4
+    kernel /Ubuntu_22.04.4_Live-server/vmlinuz
+    initrd /Ubuntu_22.04.4_Live-server/initrd
+    append ip=dhcp url=http://192.168.2.107/autoinstall/ubuntu-22.04.4-live-server-amd64.iso
+
+LABEL CentOS-7.9 IPv4
+    kernel /CentOS7.9/vmlinuz
+    initrd /CentOs7.9/initrd.img
+    append ip=dhcp url=http://192.168.2.107/autoinstall/CentOS-7-x86_64-DVD-2009.iso
